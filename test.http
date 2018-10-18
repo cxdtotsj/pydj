@@ -1,1 +1,19 @@
-Get http://127.0.0.1:8000/index HTTP/1.1
+@baseurl = http://127.0.0.1:8000
+@xformcontenttype = application/x-www-form-urlencoded
+@csrtoken = 1qnI9NugYxod0YETH4MmaEvGeaXXqFOvdOHSx7m4MuZ5reVXBMlysje9jLi7jW1T
+@user = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36
+@ctoken = csrftoken=SQuMPUm3RgaRKkF42sRkoph5MeHoLPCz4eOWdeeRFdLJbAW8WaqwG40yRP2yE6PX
+
+
+Get {{baseurl}}/index HTTP/1.1
+
+###
+
+POST {{baseurl}}/login_action/ HTTP/1.1
+Content-Type: {{xformcontenttype}}
+User-Agent: {{user}}
+Cookie: {{ctoken}}
+
+username=admin
+&password=admin123
+&csrfmiddlewaretoken=vcsbhCJPuH2f5HRCZsu7bp6tgSrEmOCDHAMlFWBDiED7wX8GTa3jt4PWltMOf5P1
