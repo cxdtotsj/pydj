@@ -29,7 +29,7 @@ def login_action(request):
     else:
         return HttpResponse("Method Not Allowed")
 
-# 发布会管理
+# 发布会管理1
 @login_required
 def event_manage(request):
     # username = request.COOKIES.get('user','') # 读取浏览器 cookie
