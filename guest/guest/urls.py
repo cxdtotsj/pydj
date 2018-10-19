@@ -24,4 +24,10 @@ urlpatterns = [
     url(r'^index/$',views.index),
     url(r'^login_action/$',views.login_action),
     url(r'^event_manage/$',views.event_manage),
+    url(r'^eventName_search/$',views.eventName_search),
+    url(r'^guest_manage/$',views.guest_manage),
+    url(r'^guestRP_search/$',views.guestRP_search),
+    url(r'^sign_index/(?P<event_id>[0-9]+)/$', views.sign_index),
+    url(r'^sign_index_action/(?P<event_id>[0-9]+)/$',views.sign_index_action),
+    url(r'^logout/$',views.logout),
 ]
